@@ -266,66 +266,7 @@
     <a id="top-btn"></a>
 
 
-
-    <!-- jquery cdn  -->
-    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-
-    <script>
-       $("#about-page").click(function() {
-           $('html, body').animate({
-               scrollTop:        $("#about").offset().top-66
-           }, 1000);
-        return false;
-       });
-       $("#project-page").click(function() {
-           $('html, body').animate({
-               scrollTop:        $("#projects").offset().top-66
-           }, 1000);
-        return false;
-       });
-       $("#contact-page").click(function() {
-           $('html, body').animate({
-               scrollTop:        $("#contact").offset().top-66
-           }, 1000);
-        return false;
-       });
-    </script>
-
-    <script>
-      var btn = $('#top-btn');
-
-      $(window).scroll(function() {
-        if ($(window).scrollTop() > 300) {
-          btn.addClass('show');
-        } else {
-          btn.removeClass('show');
-        }
-      });
-
-      btn.on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({scrollTop:0}, '300');
-      });
-
-    </script>
-
-    <script>
-        $(".header__main-ham-menu").click(function(){
-          $(".header__sm-menu").addClass("active-menu");
-        });
-
-        $(".header__main-ham-menu").click(function(){
-          $(".header__main-ham-menu-cont").addClass("remove-icon");
-        });
-
-        $(".header__main-ham-menu-close").click(function(){
-          $(".header__main-ham-menu-cont").removeClass("remove-icon");
-        });
-
-        $(".header__main-ham-menu-close").click(function(){
-          $(".header__sm-menu").removeClass("active-menu");
-        });
-    </script>
+ 
 
 
 </body>
