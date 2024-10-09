@@ -12,257 +12,264 @@
         <link rel="stylesheet" href="index.css">
 </head>
 
+
 <body>
-    <!--Header Section -->
-    <header>
-        <div class="header_main">
-            <div class="heder_items">
-                <div class="langauge">
-                    <p>USD <span><i class="arrow down"></i></span></p>
-                    <p>ENGLISH <span><i class="arrow down"></i></span></p>
-                </div>
+
+    <!-- header  -->
+    <header class="header">
+        <div class="header__content">
+          <div class="header__logo-container">
+            <div class="header__logo-img-cont">
+              <img src="#" alt="Logo Image" class="header__logo-img">
             </div>
-            <div class="heder_items">
-                <div class="summer_sale">
-                    <p>Summer Sale - free shipping on all orders!</p>
+            <span class="header__logo-sub">Chetan Dekate</span>
+          </div>
+          <div class="header__main">
+                <ul class="header__links">
+              <li class="header__link-wrapper">
+                <a href="index.html" class="header__link" id="home-page"> Home </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="#about" class="header__link" id="about-page">About </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="#projects" class="header__link" id="project-page"> Projects </a>
+              </li>
+              <li class="header__link-wrapper">
+                <a href="#contact" class="header__link" id="contact-page"> Contact </a>
+              </li>
+                </ul>
+                <div class="header__main-ham-menu-cont">
+              <img src="#" alt="hamburger menu" class="header__main-ham-menu">
+              <img src="#" alt="hamburger menu close " class="header__main-ham-menu-close">
                 </div>
-            </div>
-            <div class="heder_items logmenu">
-                <div class="log_area">
-                    <ul>
-                        <li>
-                            Register
-                        </li>
-                        <li class="log">
-                            Log In
-                        </li>
-                        <li>
-                            Wishlist
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          </div>
+        </div>
+        <div class="header__sm-menu">
+          <div class="header__sm-menu-content">
+            <ul class="header__sm-menu-links">
+              <li class="header__sm-menu-link">
+                <a href="index.html"> Home </a>
+              </li>
+
+              <li class="header__sm-menu-link">
+                <a href="#about"> About </a>
+              </li>
+
+              <li class="header__sm-menu-link">
+                <a href="#projects"> Projects </a>
+              </li>
+
+              <li class="header__sm-menu-link">
+                <a href="#contact"> Contact </a>
+              </li>
+            </ul>
+          </div>
         </div>
     </header>
 
-    <div class="overlay" id="overlay"></div>
-    <!-- Header Section -->
-    <!-- sub Header sections -->
-    <header>
-        <div class="sub_header_area">
-            <div class="icons_resp">
-                <div class="hamburger" id="hamburger">
+    <!-- home section  -->
+    <section class="home-hero">
+        <div class="home-hero__content">
+          <h1 class="heading-primary">Hey, I'm Chetan Dekate</h1>
+          <div class="home-hero__info">
+            <p class="text-primary">
+                I am front and developer. I have 2 year exprienice in this feild .<br>
+                I current work in forefront infotech company.
+            </p>
+          </div>
+          <div class="home-hero__cta">
+            <a href="#projects" class="btn btn--bg">Projects</a>
+          </div>
+        </div>
+        <div class="home-hero__socials">
+          <div class="home-hero__social">
+            <a href="#" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
+              <img src="#" alt="Ram Maheshwari Linkedin Profile" class="home-hero__social-icon">
+            </a>
+          </div>
+          <div class="home-hero__social">
+            <a href="#" class="home-hero__social-icon-link" rel="noreferrer" target="_blank">
+              <img src="#" alt="RammCodes Twitter Profile" class="home-hero__social-icon">
+            </a>
+          </div>
+          <div class="home-hero__social">
+            <a href="#" class="home-hero__social-icon-link home-hero__social-icon-link--bd-none" rel="noreferrer" target="_blank">
+              <img src="#" alt="RammCodes Youtube Channel" class="home-hero__social-icon">
+            </a>
+          </div>
+          <div class="home-hero__social">
+            <a href="https://github.com/dkchetan" rel="noreferrer" target="_blank">
+              <img src="#" alt="RammCodes Github Profile" class="home-hero__social-icon">
+            </a>
+          </div>
+        </div>
+    </section>
 
-                    <div class="menu">
-                        <div class="bar1"></div>
-                        <div class="bar2"></div>
-                        <div class="bar3"></div>
-                    </div>
-                </div>
-                <div class="profile_icon" id="profile_view">
-                    <i class="fa-regular fa-user"></i>
-                </div>
+    <!-- about us  -->
+    <section id="about" class="about sec-pad">
+        <div class="main-container">
+          <h2 class="heading heading-sec heading-sec__mb-med">
+            <span class="heading-sec__main">About Me</span>
+            <span class="heading-sec__sub">
+              Here you will find more information about me, what I do, and my
+              current skills mostly in terms of programming and technology
+            </span>
+          </h2>
+          <div class="about__content">
+            <div class="about__content-main">
+              <h3 class="about__content-title">Get to know me!</h3>
+              <div class="about__content-details">
+                <p class="about__content-details-para">
+                  I'm a <strong>Frontend  Web Developer</strong> building
+                  and managing the Front-end of Websites and Web Applications that
+                  leads to the success of the overall product. Check out some of
+                  my work in the <strong>Projects</strong> section.
+                </p>
+                <p class="about__content-details-para">
+                  I'm open to <strong>Job</strong> opportunities where I can
+                  contribute, learn and grow. If you have a good opportunity that
+                  matches my skills and experience then don't hesitate to
+                  <strong>contact</strong> me.
+                </p>
+              </div>
+              <a href="#contact" class="btn btn--med btn--theme dynamicBgClr">Contact</a>
             </div>
-            <div class="sub_header_items logi_area">
-                <div class="sub_logo">
-                    <a href="./home_page.html"> <img
-                            src="https://voyage.nop-templates.com/images/thumbs/0000647_logo.png" alt=""></a>
-                </div>
+            <div class="about__content-skills">
+              <h3 class="about__content-title">My Skills</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">HTML5</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">CSS3</div>
+                <div class="skills__skill">JQUERY</div>
+                <div class="skills__skill">Wordpress</div>
+                <div class="skills__skill">Responsive Design</div>
+                <div class="skills__skill">Photoshop</div>
+                <div class="skills__skill">Figma</div>
+              </div>
             </div>
-            <div class="sub_header_items menu_area">
-                <ul>
-                    <li>Home Page</li>
-                    <li>Products <span><i class="arrow down"></i></span></li>
-                    <li>Blog </li>
-                    <li>Manufacturers <span><i class="arrow down"></i></span></li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-            <div class="sub_header_items search_bag_area">
-                <div class="search-container">
+          </div>
+        </div>
+    </section>
 
-                    <input type="text" placeholder="Search store" name="search">
-                    <button type="text" id="search"><i class="fa fa-search"></i></button>
+    <!-- project -->
+    <section id="projects" class="projects sec-pad">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-bg">
+          <span class="heading-sec__main">Projects</span>
+          <span class="heading-sec__sub">
+            Here you will find client projects In which I have worked
+          </span>
+        </h2>
 
-                </div>
-                <div class="bag_part">
-                    <ul class="bag">
-                        <li>BAG <span>0</span></li>
-                    </ul>
-                    <ul class="bag_cart">
-                        <i class="fa-solid fa-cart-shopping"><span>0</span></i>
-                    </ul>
-                </div>
+        <div class="projects__content">
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img src="#" alt="Software Screenshot" class="projects__row-img" loading="lazy">
             </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">House Labels</h3>
+              <a class="btn btn--med btn--theme dynamicBgClr" href="https://www.houselabels.com/" target="_blank">link here</a>
+            </div>
+          </div>
+          <div class="projects__row">
+            <div class="projects__row-img-cont">
+              <img src="#" alt="Software Screenshot" class="projects__row-img" loading="lazy">
+            </div>
+            <div class="projects__row-content">
+              <h3 class="projects__row-content-title">i Repair Center</h3>
+              <a class="btn btn--med btn--theme dynamicBgClr" href="https://irepair-centre.co.uk/" target="_blank">link here</a>
+            </div>
+          </div>
+          <div class="view-more-project">
+             <a href="project.html">view More</a>
+          </div>
         </div>
-    </header>
-    <!-- slider item -->
-    <div class="slide_responsive">
-        <div class="clgbtn" id="clgbtn">
-            <button>close</button>
+      </div>
+    </section>
+
+    <!-- contact us  -->
+    <section id="contact" class="contact sec-pad dynamicBg">
+      <div class="main-container">
+        <h2 class="heading heading-sec heading-sec__mb-med">
+          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
+          <span class="heading-sec__sub heading-sec__sub--lt">
+            Feel free to Contact me by submitting the form below and I will get
+            back to you as soon as possible
+          </span>
+        </h2>
+        <div class="contact__form-container">
+          <form action="#" class="contact__form" method="post"><input type="hidden" name="form-name" value="form 1">
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="name">Name</label>
+              <input required="" placeholder="Enter Your Name" type="text" class="contact__form-input" name="name" id="name">
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="email">Email</label>
+              <input required="" placeholder="Enter Your Email" type="email" class="contact__form-input" name="email" id="email">
+            </div>
+            <div class="contact__form-field">
+              <label class="contact__form-label" for="message">Message</label>
+              <textarea required="" cols="30" rows="10" class="contact__form-input" placeholder="Enter Your Message" name="message" id="message"></textarea>
+            </div>
+            <button type="submit" class="btn btn--theme contact__btn">
+              Submit
+            </button>
+          </form>
         </div>
-        <!-- for menu -->
-        <div class="menu_item_slide menu_item_profile">
-            <ul>
-                <li>Home Page</li>
-                <li class="products_slide">
-                    <div class="li_items">Products</div>
-                    <img src="./assets/right-arrow.png" alt="">
-                </li>
-                <li>Blogs</li>
-                <li class="manufacturers">
-                    <div class="li_items">Manufacturers</div>
-                    <img src="./assets/right-arrow.png" alt="">
-                </li>
-                <li>Contact us</li>
-            </ul>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="#">
+                <img class="main-footer__icon" src="image/linkedin-ico.png" alt="Ram Maheshwari Linkedin Profile">
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img class="main-footer__icon" src="image/github-ico.png" alt="RammCodes Github Profile">
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img class="main-footer__icon" src="image/yt-ico.png" alt="RammCodes Github Profile">
+              </a>
+              <a target="_blank" rel="noreferrer" href="#">
+                <img class="main-footer__icon" src="image/instagram-white.png" alt="RammCodes Github Profile">
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h2 class="heading heading-sm text-lt">chetan dekate</h2>
+            <p class="main-footer__short-desc">
+              I am front and developer. I have 2 year exprienice in this feild .
+              I current work in forefront infotech company.
+            </p>
+          </div>
         </div>
 
-        <!-- profile area -->
-        <div class=" menu_item_slide profile_area">
-            <ul>
-                <li>Register</li>
-                <li>
-                    Log In
-                </li>
-                <li>Wishlist</li>
-
-                <li> Shoping cart</li>
-            </ul>
+        <div class="main-footer__lower">
+          © Copyright
+          <script>
+            document.write(new Date().getFullYear());
+          </script>2024
+          . Made by
+          <a rel="noreferrer" target="_blank" href="#">chetan dekate</a>
         </div>
-        <!-- search area -->
-        <div class=" menu_item_slide search_slide_area">
-            <div class="search-container slide_search" id="">
-                <form>
-                    <input class="slide_input" type="text" placeholder="Search store" name="search">
-                    <button class="slide_search_button"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- slider item -->
-    <!-- sub Header sections -->
-    <!-- Main Content Section -->
-    <main>
-        <div class="container">
-            <h2>Welcome to My Website</h2>
-            <p>This is a sample paragraph for the main content area.</p>
-        </div>
-    </main>
-    <!-- Main Content Section -->
-    <!-- Footer Section -->
-    <footer>
-        <div class="news_screen">
-            <div class="footer_upper_area">
-                <p>Newsletter</p>
-                <span>
-                    Subscribe for weekly offers and new content!
-                </span>
-
-                <div class="news_email">
-                    <div class="news_form">
-                        <input id="news_email" placeholder="Enter your email here..."
-                            aria-label="Sign up for our newsletter" type="email" name="NewsletterEmail" value="">
-                        <button type="button" class="">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer_area">
-            <div class="footer_items Information">
-                <div class="foot_head" id="foot_head">
-                    <strong>
-                        Information
-                    </strong>
-                    <img src="./assets/right-arrow.png" alt="">
-                </div>
-                <ul class="Information_list">
-                    <li>Shipping & returns</li>
-                    <li>Privacy notice</li>
-                    <li>Conditions of Use</li>
-                    <li>About us</li>
-                </ul>
-            </div>
-            <div class="footer_items customer_service">
-                <div class="foot_head" id="customer_service">
-                    <strong>
-                        Customer service
-                    </strong>
-                    <img src="./assets/right-arrow.png" alt="">
-                </div>
-                <ul class="customer_service_list">
-                    <li>FAQ</li>
-                    <li>Help</li>
-                    <li>Apply for vendor</li>
-                    <li>Contact us</li>
-                </ul>
-            </div>
-            <div class="footer_items selected_offers">
-                <div class="foot_head" id="selected_offers_list">
-                    <strong>Selected offers</strong>
-                    <img src="./assets/right-arrow.png" alt="">
-                </div>
-                <ul class="selected_offers_list">
-                    <li>New products</li>
-                    <li>Recently viewed</li>
-                    <li>Compare products list</li>
-                    <li>Search</li>
-                </ul>
-            </div>
-            <div class="footer_items my_account">
-                <div class="foot_head" id="my_account">
-                    <strong>My account</strong>
-                    <img src="./assets/right-arrow.png" alt="">
-                </div>
-                <ul class="my_account my_account_list">
-                    <li>My account</li>
-                    <li>Orders</li>
-                    <li>Addresses</li>
-                    <li>Apply for vendor account</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer_icons_area">
-            <ul>
-                <li><i class="fa-brands fa-facebook"></i></li>
-                <li><i class="fa-brands fa-twitter"></i></li>
-                <li><i class="fa-brands fa-pinterest"></i></li>
-                <li><i class="fa-brands fa-instagram"></i></li>
-                <li><i class="fa-brands fa-youtube"></i></li>
-                <li><i class="fa-brands fa-vimeo"></i></li>
-            </ul>
-        </div>
-        <div class="copyright_area">
-            <div class="copy_items link_copy">
-                <ul>
-                    <li>Powered by <span>nopCommerce</span></li>
-                    <li>Designed by <span>Nop-Templates.com</span></li>
-                </ul>
-            </div>
-            <div class="copy_items">
-                <div class="payment_photos">
-                    <ul>
-                        <li><i class="fa-brands fa-cc-paypal"></i></li>
-                        <li><i class="fa-brands fa-cc-visa"></i></li>
-                        <li><i class="fa-solid fa-credit-card"></i></li>
-                        <li><i class="fa-brands fa-cc-mastercard"></i></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copy_items">
-                <ul>
-                    <li>Copyright © 2024 Your store name. All rights reserved.</li>
-                </ul>
-            </div>
-        </div>
+      </div>
     </footer>
-    <!-- Footer Section -->
+
+    <a id="top-btn"></a>
+
+
+ 
+
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="./index.js"></script>
+ 
 
 </html>
