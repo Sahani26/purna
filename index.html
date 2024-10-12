@@ -14,8 +14,7 @@
 
 
 <body>
-
-<iframe id="pdf-viewer" src="https://www.terraintamer.com/documents/parts/suspension/toyota/198-sk007/file#toolbar=1" frameborder="0"></iframe>
+<embed id="pdf-viewer" src="https://www.terraintamer.com/documents/parts/suspension/toyota/198-sk007/file#toolbar=1" type="application/pdf" />
 
 <script>
     const pdfUrl = "https://www.terraintamer.com/documents/parts/suspension/toyota/198-sk007/file#toolbar=1";
@@ -27,8 +26,8 @@
         if (currentPage > totalPages) {
             currentPage = 1; // Loop back to the first page
         }
-        const iframe = document.getElementById("pdf-viewer");
-        iframe.src = pdfUrl + "#page=" + currentPage + "&toolbar=1"; // Update the iframe's src to show the current page
+        const embed = document.getElementById("pdf-viewer");
+        embed.src = pdfUrl + "#page=" + currentPage + "&toolbar=1"; // Update the embed's src to show the current page
     }
 
     setInterval(changePage, 3000); // Change page every 3 seconds
