@@ -10,27 +10,73 @@
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="index.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.min.js"></script>
 </head>
 
 
 <body>
-<embed id="pdf-viewer" src="https://www.terraintamer.com/documents/parts/suspension/toyota/198-sk007/file#toolbar=1" type="application/pdf" />
+<div id="pdf-container">
+    <canvas id="pdf-canvas"></canvas>
+    <div id="controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+        <span id="page-info"></span>
+    </div>
+</div>
 
 <script>
-    const pdfUrl = "https://www.terraintamer.com/documents/parts/suspension/toyota/198-sk007/file#toolbar=1";
-    const totalPages = 10; // Replace with the total number of pages in your PDF
-    let currentPage = 1;
+    const url = "https://www.terraintamer.com/documents/parts/suspension/toyota/198-sk007/file"; // PDF URL
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.12.313/pdf.worker.min.js';
 
-    function changePage() {
-        currentPage++;
-        if (currentPage > totalPages) {
-            currentPage = 1; // Loop back to the first page
-        }
-        const embed = document.getElementById("pdf-viewer");
-        embed.src = pdfUrl + "#page=" + currentPage + "&toolbar=1"; // Update the embed's src to show the current page
+    let pdfDoc = null,
+        currentPage = 1,
+        totalPages = 0;
+
+    function renderPage(pageNum) {
+        pdfDoc.getPage(pageNum).then(page => {
+            const scale = 1.5; // You can adjust the scale for better quality
+            const viewport = page.getViewport({ scale: scale });
+            const canvas = document.getElementById('pdf-canvas');
+            const context = canvas.getContext('2d');
+
+            canvas.height = viewport.height;
+            canvas.width = viewport.width;
+
+            const renderContext = {
+                canvasContext: context,
+                viewport: viewport
+            };
+            page.render(renderContext).promise.then(() => {
+                document.getElementById('page-info').textContent = `Page ${pageNum} of ${totalPages}`;
+            });
+        });
     }
 
-    setInterval(changePage, 3000); // Change page every 3 seconds
+    function loadPDF() {
+        pdfjsLib.getDocument(url).promise.then(pdf => {
+            pdfDoc = pdf;
+            totalPages = pdf.numPages;
+            renderPage(currentPage);
+        });
+    }
+
+    document.getElementById('prev').addEventListener('click', () => {
+        if (currentPage > 1) {
+            currentPage--;
+            renderPage(currentPage);
+        }
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+        if (currentPage < totalPages) {
+            currentPage++;
+            renderPage(currentPage);
+        }
+    });
+
+    loadPDF();
 </script>
 
 </body>
